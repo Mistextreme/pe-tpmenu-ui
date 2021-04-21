@@ -1,3 +1,10 @@
+// Add your options
+
+$("tp1").click(function() {
+  $.post('https://pe-tpmenu-ui/tpo', {action: 'tpone' })
+})
+
+// Do not touch below this unless you know what your doing
 var slideIndex = 1;
 showSlides(slideIndex);
 
