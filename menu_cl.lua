@@ -9,7 +9,7 @@ RegisterNUICallback("close", function(data)
     end
 end)
 
-RegisterNUICallback('tpo', function(data)
+RegisterNUICallback('tpOptions', function(data)
     TriggerEvent('PE:teleport', data.action)
 end)
 
@@ -44,6 +44,8 @@ RegisterCommand('tpmenu', function()
         SetNuiFocus(false, false)
     end
 end)
+
+RegisterKeyMapping('tpmenu', 'Open the teleport menu', 'keyboard', 'f5')
 
 -- Threads 
 Citizen.CreateThread(function()

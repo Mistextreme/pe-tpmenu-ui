@@ -1,8 +1,22 @@
 // Add your options
+$("#tp1").click(function() { $.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tpone'})); return;})
+$("#tp2").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tptwo'})); return;})
+$("#tp3").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tpthree'})); return;})
 
-$("tp1").click(function() {
-  $.post('https://pe-tpmenu-ui/tpo', {action: 'tpone' })
-})
+window.addEventListener("message", function (event) {
+  switch (event.data.action) {
+    case "show":
+      $("#slideshow").fadeIn();
+      $("#dots").fadeIn();
+    break;
+    
+    case "hide":
+      $("#slideshow").fadeOut();
+      $("#dots").fadeOut();
+    break;
+  };
+});
+    
 
 // Do not touch below this unless you know what your doing
 var slideIndex = 1;
@@ -33,3 +47,10 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+// Close with 'Escape' key
+document.onkeyup = function(event) {
+  if (event.key == 'Escape') {
+      $.post('https://pe-tpmenu-ui/close');
+  }
+};
