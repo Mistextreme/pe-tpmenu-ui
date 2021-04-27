@@ -4,11 +4,14 @@ game { 'gta5' }
  
 lua54 'yes'
  
-description 'A tp menu made by Project Entity'
+description 'A tp menu with NUI made by Project Entity'
  
-version '1.0.0'
+version '1.0.1'
  
-client_script 'menu_cl.lua'
+client_scripts {
+    'config.lua',
+    'menu_cl.lua'
+}
  
 ui_page 'html/ui.html'
 

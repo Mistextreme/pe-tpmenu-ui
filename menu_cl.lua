@@ -1,4 +1,4 @@
-local isOpen = false
+local isOpen
 
 -- NUI Callbacks/Events
 RegisterNUICallback("close", function(data)
@@ -21,14 +21,30 @@ AddEventHandler('PE:teleport', function(action)
     else 
         ped = PlayerPedId()
     end
-    if action == "tpone" then
-        SetEntityCoords(ped, -45.3, -1113.6, 26.43, false, false, false, true)
-    elseif action == "tptwo" then
-        SetEntityCoords(ped, -45.3, -1013.6, 26.43, false, false, false, true)
-    elseif action == "tpthree" then
-        SetEntityCoords(ped, -45.3, -1013.6, 26.43, false, false, false, true)
-    --elseif action == "tpfour" then -- For creating more, you copy this line. Change the tpfour to the next number(or whatever you want)
-        --SetEntityCoords(ped, -45.3, -1013.6, 26.43, false, false, false, true) -- Then copy this line and change the coords to your location
+    for k, v in ipairs(loc) do
+        if action == "tp1" then
+            SetEntityCoords(ped, v.num1.x, v.num1.y, v.num1.z, false, false, false, true)
+        elseif action == "tp2" then
+            SetEntityCoords(ped, v.num2.x, v.num2.y, v.num2.z, false, false, false, true)
+        elseif action == "tp3" then
+            SetEntityCoords(ped, v.num3.x, v.num3.y, v.num3.z, false, false, false, true)
+        elseif action == "tp4" then
+            SetEntityCoords(ped, v.num4.x, v.num4.y, v.num4.z, false, false, false, true)
+        elseif action == "tp5" then
+            SetEntityCoords(ped, v.num5.x, v.num5.y, v.num5.z, false, false, false, true)
+        elseif action == "tp6" then
+            SetEntityCoords(ped, v.num6.x, v.num6.y, v.num6.z, false, false, false, true)
+        elseif action == "tp7" then
+            SetEntityCoords(ped, v.num7.x, v.num7.y, v.num7.z, false, false, false, true)
+        elseif action == "tp8" then
+            SetEntityCoords(ped, v.num8.x, v.num8.y, v.num8.z, false, false, false, true)
+        elseif action == "tp9" then
+            SetEntityCoords(ped, v.num9.x, v.num9.y, v.num9.z, false, false, false, true)
+        elseif action == "tp10" then
+            SetEntityCoords(ped, v.num10.x, v.num10.y, v.num10.z, false, false, false, true)
+        --elseif action == "tpeleven" then -- For creating more, you copy this line. Change the tpfour to the next number(or whatever you want)
+            --SetEntityCoords(ped, v.num11.x, v.num11.y, v.num11.z, false, false, false, true) -- Then copy this line and change the coords to your location
+        end
     end
 end)
 

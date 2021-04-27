@@ -19,24 +19,25 @@ img {vertical-align: middle;}
   margin: auto;
   position: relative;
   width: 20%;
+  font-size: 2vh;
 }
 
 .slideshow-container img {
   max-width: 100%;
+  width: 100%;
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: auto;
-  padding: 16px;
-  margin-top: -22px;
+  padding: 3%;
   color: white;
   font-family: Neue;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 100%;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -44,9 +45,16 @@ img {vertical-align: middle;}
   animation-duration: 2s;
 }
 
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 
 /* Button styling */
-
 .button {
   backface-visibility: hidden;
   position: absolute;
@@ -54,8 +62,8 @@ img {vertical-align: middle;}
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
-  background: linear-gradient( #3dc563 20.343056921228012%, #43cc6a 100%);
+  background: rgb(7,36,114);
+  background: linear-gradient(90deg, rgba(7,36,114,1) 0%, rgba(45,149,240,1) 50%, rgba(7,36,114,1) 100%);
   border: 0px solid #444444;
   border-width: 0px 0px 0px 0px;
   border-radius: 4px;
@@ -64,41 +72,30 @@ img {vertical-align: middle;}
   font-family: Neue;
   line-height: 2vw;
   width: 50%;
+  opacity: 0.7;
+  transition: all 0.5s;
 }
 
-.button:hover {
-  background: linear-gradient( #4dde76 20.343056921228012%, #4dde76 100%);
+button:hover{
+  transition: all 0.5s;
+  opacity:1;
 }
 
-.button:active {
-  background: yellow;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
+/* Slides and Captions*/
 .text {
   color: var(--white-text);
-  font-size: 15px;
+  font-size: 80%;
   font-family: Neue;
   padding: 6px;
   position: absolute;
   top: 1%;
   width: 100%;
-  text-align: center;
+  text-align: center ;
 }
 
 .numbertext {
   color: var(--white-text);
-  font-size: 12px;
+  font-size: 70%;
   font-family: Neue;
   padding: 8px 12px;
   position: absolute;
@@ -107,12 +104,20 @@ img {vertical-align: middle;}
   animation-duration: 2s;
 }
 
+/* Dots and slides */
+.dots {
+  height: 5%;
+  width: 20%;
+  position: fixed;
+  bottom: 72%;
+  left: 40%;
+  text-align: center;
+}
+
 .dot {
   cursor: pointer;
-  max-height: 15px;
-  max-width: 15px;
-  height: 10px;
-  width: 10px;
+  height: 20%;
+  width: 3%;
   margin: 0 0px;
   background-color: var(--light-grey);
   border-radius: 50%;
@@ -148,8 +153,4 @@ img {vertical-align: middle;}
   60% {color:rgb(235, 235, 235);}
   80% {color:rgb(245, 245, 245);}
   100% {color:rgb(255, 255, 255);}
-}
-
-@media only screen and (max-width: 300px) {
-  .prev, .next, .text, .btn {font-size: 11px}
 }

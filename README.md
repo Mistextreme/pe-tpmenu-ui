@@ -1,9 +1,8 @@
 # PE-tpmenu-ui 
 
-
 ## Description
 
-An tp menu with a ui.
+An tp menu with a slider and images.
 
 [VIDEO]()
 
@@ -12,6 +11,7 @@ An tp menu with a ui.
 
 ## Getting Started
 
+* By default, the resource comes with 10 locations. These can be changed by following the instructions in the menu_cl.lua, ui.html, and script.js
 ### Installing
 
 * You can either download it or clone it with git.
@@ -27,9 +27,3 @@ An tp menu with a ui.
 If you find any issues with this please make sure to report them.
 * [Issues](https://github.com/Project-Entity/pe-adminmenu/issues)
 * [Pull Request](https://github.com/Project-Entity/pe-adminmenu/pulls)
-
-## What version are we in?
-
-* 1.0
-    * Initial Release
-
