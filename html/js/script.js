@@ -14,10 +14,12 @@ window.addEventListener("message", function (event) {
   switch (event.data.action) {
     case "show":
       $("#slideshow").fadeIn();
+      $("#dots").fadeIn();
     break;
     
     case "hide":
       $("#slideshow").fadeOut();
+      $("#dots").fadeIn();
     break;
   };
 });
