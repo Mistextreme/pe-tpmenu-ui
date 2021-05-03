@@ -9,8 +9,11 @@ description 'A tp menu with NUI made by Project Entity'
 version '1.0.1'
  
 client_scripts {
-    'config.lua',
-    'menu_cl.lua'
+    'client/*.lua'
+}
+
+server_scripts {
+    'server/*.lua'
 }
  
 ui_page 'html/ui.html'
