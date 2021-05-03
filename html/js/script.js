@@ -50,7 +50,6 @@ function showSlides(number) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  console.log(`${slideIndex} /`,`${slides.length}`)
   $(".numbertext").text(`${slideIndex} /${slides.length}`);
 }
 
