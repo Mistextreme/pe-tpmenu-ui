@@ -1,15 +1,14 @@
 // Add your options
-$("#tp1").click(function() { $.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp1'})); return;})
-$("#tp2").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp2'})); return;})
-$("#tp3").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp3'})); return;})
-$("#tp4").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp4'})); return;})
-$("#tp5").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp5'})); return;})
-$("#tp6").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp6'})); return;})
-$("#tp7").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp7'})); return;})
-$("#tp8").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp8'})); return;})
-$("#tp9").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp9'})); return;})
-$("#tp10").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp10'})); return;})
-//$("#tp11").click(function() {$.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: 'tp11'})); return;}) // Just copy this line and change the action and id to match the html and lua one.
+newTeleport("#tp1"), newTeleport("#tp2"), newTeleport("#tp3"), newTeleport("#tp4"), newTeleport("#tp5"),
+newTeleport("#tp6"), newTeleport("#tp7"), newTeleport("#tp8"), newTeleport("#tp9"), newTeleport("#tp10"); 
+
+// Teleport function
+function newTeleport(name) {
+  $(name).click(function() {
+    $.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: name}));
+    return;
+  })
+};
 
 window.addEventListener("message", function (event) {
   switch (event.data.action) {
@@ -20,7 +19,7 @@ window.addEventListener("message", function (event) {
     
     case "hide":
       $("#slideshow").fadeOut();
-      $("#dots").fadeOut();
+      $("#dots").fadeIn();
     break;
   };
 });
@@ -53,6 +52,7 @@ function showSlides(number) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+  $(".numbertext").text(`${slideIndex} /${slides.length}`);
 }
 
 // Close with 'Escape' key
