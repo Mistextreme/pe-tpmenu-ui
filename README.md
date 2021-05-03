@@ -4,7 +4,7 @@
 
 **PE-tpmenu-ui** is a teleport menu that allows you to teleport to pre-confugred locations. By default, this resource comes with 10 locations. These can be changed by editing the resource. See *Adding Locations*.
 
-[VIDEO](https://streamable.com/9iqh3q)
+[Preview](https://streamable.com/9iqh3q)
 
 ## Usage:
 The menu can be opened by doing the following:
