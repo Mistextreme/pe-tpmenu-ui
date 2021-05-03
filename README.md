@@ -20,7 +20,7 @@ ensure pe-tpmenu-ui
 ## Adding Locations
 1) To add more locations, you to the config.lua and setup and new location.
 2) Then go to the ui.html and setup a new block that matches the action in your config.lua.
-3) Finally you setup the script.js and add a new "trigger" for the location you created.
+3) Finally you setup the script.js and add a new function that matches the id of your html file and the config.lua.
 
 ## Issues
 If you find any issues with this please make sure to report them.
