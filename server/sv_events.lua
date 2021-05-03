@@ -1,9 +1,10 @@
 RegisterNetEvent('PE:teleport'), function(action)
+    local source = source
     local ped
-    if IsPedInAnyVehicle(PlayerPedId(), false) then
-        ped = GetVehiclePedIsIn(PlayerPedId(), false)
+    if IsPedInAnyVehicle(GetPlayerPed(source), false) then
+        ped = GetVehiclePedIsIn(GetPlayerPed(source), false)
     else 
-        ped = PlayerPedId()
+        ped = GetPlayerPed(source)
     end
     for i = 1, #Config.Locations do
         local location = Config.Locations[i]
