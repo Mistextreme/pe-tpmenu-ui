@@ -1,6 +1,6 @@
 local isOpen
 
--- NUI Callbacks/Events
+-- NUI Callbacks
 RegisterNUICallback("close", function(data)
     if isOpen then
         isOpen = false
@@ -10,22 +10,7 @@ RegisterNUICallback("close", function(data)
 end)
 
 RegisterNUICallback('tpOptions', function(data)
-    TriggerEvent('PE:teleport', data.action)
-end)
-
-RegisterNetEvent('PE:teleport')
-AddEventHandler('PE:teleport', function(action)
-    local ped
-    if IsPedInAnyVehicle(PlayerPedId(), false) then
-        ped = GetVehiclePedIsIn(PlayerPedId(), false)
-    else 
-        ped = PlayerPedId()
-    end
-    for k, v in ipairs(loc) do
-        if action == v.action then
-            SetEntityCoords(ped, v.coords.x, v.coords.y, v.coords.z, false, false, false, true)
-        end
-    end
+    TriggerServerEvent('PE:teleport', data.action)
 end)
 
 -- Commands
