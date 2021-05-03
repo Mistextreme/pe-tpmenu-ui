@@ -1,7 +1,7 @@
 Config = {}
 
 Config.Locations = {
-    {coords = vector3(498.839, 5594.039, 95.480),       heading = 153.00, action = "tp1"},
+    {coords = vector3(498.839, 5594.039, 795.480),       heading = 153.00, action = "tp1"},
     {coords = vector3(1855.636, 2616.454, 45.672),      heading = 153.00, action = "tp2"},
     {coords = vector3(869.567, -24.962, 78.764),        heading = 153.00, action = "tp3"},
     {coords = vector3(427.150, -978.124, 30.709),       heading = 153.00, action = "tp4"},
