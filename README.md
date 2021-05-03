@@ -24,5 +24,5 @@ ensure pe-tpmenu-ui
 
 ## Issues
 If you find any issues with this please make sure to report them.
-* [Issues](https://github.com/Project-Entity/pe-adminmenu/issues)
-* [Pull Request](https://github.com/Project-Entity/pe-adminmenu/pulls)
+* [Issues](https://github.com/Project-Entity/pe-tpmenu-ui/issues)
+* [Pull Request](https://github.com/Project-Entity/pe-pe-tpmenu-ui//pulls)
