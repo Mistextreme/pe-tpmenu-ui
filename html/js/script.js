@@ -1,10 +1,10 @@
 // Add your options
-newTeleport("#tp1"), newTeleport("#tp2"), newTeleport("#tp3"), newTeleport("#tp4"), newTeleport("#tp5"),
-newTeleport("#tp6"), newTeleport("#tp7"), newTeleport("#tp8"), newTeleport("#tp9"), newTeleport("#tp10"); 
+newTeleport("tp1"), newTeleport("tp2"), newTeleport("tp3"), newTeleport("tp4"), newTeleport("tp5"),
+newTeleport("tp6"), newTeleport("tp7"), newTeleport("tp8"), newTeleport("tp9"), newTeleport("tp10"); 
 
 // Teleport function
 function newTeleport(name) {
-  $(name).click(function() {
+  $(`#${name}`).click(function() {
     $.post('https://pe-tpmenu-ui/tpOptions', JSON.stringify({action: name}));
     return;
   })
